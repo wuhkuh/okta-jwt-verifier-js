@@ -93,6 +93,15 @@ declare namespace OktaJwtVerifier {
      */
     cacheMaxAge?: number;
     /**
+     * Number of cached keys
+     *
+     * By default, the cache can contain up to 3 JWKs. This can be configured
+     * with the cacheMaxEntries option.
+     *
+     * Read more: https://github.com/okta/okta-jwt-verifier-js#caching--rate-limiting
+     */
+    cacheMaxEntries?: number;
+    /**
      * Rate limit in requests per minute
      *
      * If a key ID is not found in the cache, the JWKs endpoint will be requested.

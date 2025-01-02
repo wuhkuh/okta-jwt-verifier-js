@@ -199,7 +199,7 @@ class OktaJwtVerifier {
       jwksUri: this.jwksUri,
       cache: true,
       cacheMaxAge: options.cacheMaxAge || (60 * 60 * 1000),
-      cacheMaxEntries: 3,
+      cacheMaxEntries: options.cacheMaxEntries || 3,
       jwksRequestsPerMinute: options.jwksRequestsPerMinute || 10,
       rateLimit: true,
       // https://github.com/auth0/node-jwks-rsa/blob/master/CHANGELOG.md#request-agent-options

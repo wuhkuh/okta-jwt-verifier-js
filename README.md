@@ -248,6 +248,7 @@ const oktaJwtVerifier = new OktaJwtVerifier({
   issuer: 'https://{yourOktaDomain}/oauth2/default',
   clientId: '{clientId}',
   cacheMaxAge: 60 * 60 * 1000, // 1 hour
+  cacheMaxEntries: 3, // 3 JWKs
   jwksRequestsPerMinute: 10
 });
 ```
